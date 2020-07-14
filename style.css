@@ -12,7 +12,7 @@
 
   --color-pink: #fe918d;
 
-  --color-dark-pink: #ff6863;
+  --color-dark-mint: rgb(46, 192, 236);
 
   --color-dark-grey: #4d4d4d;
 
@@ -48,10 +48,27 @@
 
   --weight-regular: 400;
 
+  /*  Size */
+
+  --border-radius: 14px;
+
 }
 
 
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  cursor: default;
+}
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
 
 /* Typography */
 
@@ -100,5 +117,53 @@ p {
   color: var(--color-black);
 
   margin: 4px 0;
+
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("imgs/Dark\ Blue\ Pixelated\ Graphic\ Illustration\ Youtube\ Channel\ Art.png");
+  align-items: center;
+  color: var(--color-white);
+  padding: 16px;
+}
+
+#navbar a {
+  color: var(--color-white);
+}
+
+.navbar__logo {
+
+  display: flex;
+  align-items: center;
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar__logo i {
+  padding: 5px;
+}
+
+
+.navbar__menu {
+
+  display: flex;
+}
+
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-dark-mint);
 
 }
