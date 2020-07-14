@@ -124,7 +124,7 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-image: url("imgs/Dark\ Blue\ Pixelated\ Graphic\ Illustration\ Youtube\ Channel\ Art.png");
+  background-image: url("imgs/home-background.png");
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -165,5 +165,41 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-dark-mint);
+
+}
+
+/* HOME */
+#home {
+  background: url("imgs/home-background.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+
+}
+
+#home img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-light-white);
+}
+
+
+.home__contact {
+  font-weight: var(--weight-semi-bold);
+  font-size: var(--font-regular);
+  color: var(--color-white);
+  margin: 20px;
+  padding: 8px 12px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border: 2px solid var(--color-white);
+  border-radius: var(--border-radius);
 
 }
