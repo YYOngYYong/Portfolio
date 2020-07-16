@@ -1,7 +1,6 @@
 /* Global */
 
 :root {
-
   /* Color */
 
   --color-white: #ffffff;
@@ -51,13 +50,11 @@
   /*  Size */
 
   --border-radius: 14px;
-
 }
-
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   cursor: default;
 }
 
@@ -73,7 +70,6 @@ a {
 /* Typography */
 
 h1 {
-
   font-size: var(--font-large);
 
   font-weight: var(--weight-bold);
@@ -81,11 +77,9 @@ h1 {
   color: var(--color-black);
 
   margin: 16px 0px;
-
 }
 
 h2 {
-
   font-size: var(--font-medium);
 
   font-weight: var(--weight-semi-bold);
@@ -93,11 +87,9 @@ h2 {
   color: var(--color-black);
 
   margin: 8px 0;
-
 }
 
 h3 {
-
   font-size: var(--font-regular);
 
   font-weight: var(--weight-regular);
@@ -105,11 +97,9 @@ h3 {
   color: var(--color-black);
 
   margin: 8px 0;
-
 }
 
 p {
-
   font-size: var(--font-regular);
 
   font-weight: var(--weight-regular);
@@ -117,7 +107,6 @@ p {
   color: var(--color-black);
 
   margin: 4px 0;
-
 }
 
 /* Navbar */
@@ -135,7 +124,6 @@ p {
 }
 
 .navbar__logo {
-
   display: flex;
   align-items: center;
   font-weight: var(--weight-semi-bold);
@@ -145,9 +133,7 @@ p {
   padding: 5px;
 }
 
-
 .navbar__menu {
-
   display: flex;
 }
 
@@ -165,7 +151,6 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-dark-mint);
-
 }
 
 /* HOME */
@@ -173,7 +158,6 @@ p {
   background: url("imgs/back-color.png") center/cover no-repeat;
   padding: 40px;
   text-align: center;
-
 }
 
 #home img {
@@ -188,7 +172,6 @@ p {
   color: var(--color-light-white);
 }
 
-
 .home__contact {
   font-weight: var(--weight-semi-bold);
   font-size: var(--font-regular);
@@ -201,14 +184,23 @@ p {
   outline: none;
   border: 2px solid var(--color-white);
   border-radius: var(--border-radius);
-
 }
 
 /* About */
 
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+.section__container {
+  max-width: 1200px;
+}
+
 #about {
   text-align: center;
-  max-width: 1200px;
+
   margin: auto;
 }
 
@@ -217,7 +209,6 @@ p {
   margin: 80px 0;
   justify-content: space-between;
   padding: 50px;
-
 }
 
 .major__icon {
@@ -244,4 +235,64 @@ p {
 .major__description {
   color: var(--color-dark-grey);
   font-size: var(--font-small);
+}
+
+/* SKills */
+
+#skills {
+  text-align: center;
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-dark-grey);
+  margin: 20px 0;
+  color: var(--color-white);
+}
+
+.skillset__title {
+  color: var(--color-white);
+}
+
+.skillset_left {
+  flex-basis: 60%;
+  padding: 20px 40px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill {
+  margin-bottom: 32px;
+}
+
+.skill_bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-light-grey);
+}
+
+/*  여기서 width는 css가 아니라 tag에서 정해져야한다. */
+.skill__value {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skillset_right {
+  flex-basis: 40%;
+  background-color: var(--color-grey);
+  margin-bottom: 16px;
+}
+
+.tools {
+  background-color: var(--color-light-grey);
+  padding: 20px;
+}
+
+.etc {
+  padding: 20px;
 }
