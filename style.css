@@ -398,3 +398,37 @@ p {
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
+
+/* Testimonial */
+
+#testimonials {
+  background-color: var(--color-light-white);
+  text-align: center;
+}
+
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
+
+.testimonial__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 14px;
+}
+
+.testimonial__speech--bubble {
+  background-color: var(--color-white);
+  width: 100%;
+  text-align: center;
+  padding: 18px;
+}
+
+.testimonial__speech--bubble a {
+  color: var(--color-purple);
+}
+
+.testimonial__speech--bubble p {
+  color: var(--color-light-grey);
+}
