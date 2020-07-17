@@ -60,9 +60,32 @@ contactBtn.addEventListener('click', () => {
 
 // 스크롤 시 Home 부분 점점 투명해지게
 
-//navbar 스크롤 위치
+//home 전체가 아닌 그 안의 컨텐츠만 투명해지게
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
+})
+
+
+//맨위로 버튼만들기
+
+const upBtn = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > 800) {
+    upBtn.classList.add('visible');
+  } else {
+    upBtn.classList.remove('visible');
+  }
+})
+
+//맨위 버튼 클릭 시 최상단으로 이동
+
+upBtn.addEventListener('click', () => {
+  const scrollTop = document.querySelector('#home');
+  scrollTop.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+
 })

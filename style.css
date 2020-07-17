@@ -209,6 +209,7 @@ p {
   outline: none;
   border: 2px solid var(--color-white);
   border-radius: var(--border-radius);
+  outline: none;
 }
 
 /* About */
@@ -339,6 +340,7 @@ p {
   font-size: var(--font-regular);
   padding: 8px 40px;
   border: none;
+  outline: none;
 }
 
 .category__btn.active,
@@ -488,6 +490,27 @@ p {
 .contact__link i:hover {
   transform: scale(1.1);
   color: var(--color-purple);
+}
+/*  up 버튼! */
+.arrow-up {
+  background-color: transparent;
+  border: none;
+  color: var(--color-purple);
+
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  font-size: var(--font-large);
+  cursor: pointer;
+  outline: none;
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+  pointer-events: none;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* For below 768px screen width */
