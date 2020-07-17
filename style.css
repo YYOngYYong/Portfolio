@@ -182,6 +182,7 @@ p {
   padding: 40px;
   padding-top: 120px;
   text-align: center;
+  transition: all 300ms ease;
 }
 
 #home img {

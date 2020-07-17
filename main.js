@@ -2,8 +2,10 @@
 
 
 const navbar = document.querySelector('#navbar');
+
 //navbar의 높이
 const navbarHeight = navbar.getBoundingClientRect().height;
+
 document.addEventListener('scroll', () => {
 
   // console.log(window.scrollY);
@@ -12,9 +14,13 @@ document.addEventListener('scroll', () => {
   //scroll 좌표값을 알려줌
   if (window.scrollY > navbarHeight) {
     navbar.classList.add('navbar--dark');
+
   } else {
     navbar.classList.remove('navbar--dark');
   }
+
+
+
 })
 
 
@@ -49,4 +55,14 @@ contactBtn.addEventListener('click', () => {
     behavior: 'smooth',
     block: 'center'
   });
+})
+
+
+// 스크롤 시 Home 부분 점점 투명해지게
+
+//navbar 스크롤 위치
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 })
