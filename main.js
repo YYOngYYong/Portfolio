@@ -37,3 +37,16 @@ navbarMenu.addEventListener('click', (event) => {
   });
 
 })
+
+
+//contact 버튼 클릭 시 스크롤 이동
+
+const contactBtn = document.querySelector('.home__contact');
+contactBtn.addEventListener('click', () => {
+
+  const scrollTo = document.querySelector('#contact');
+  scrollTo.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+})
