@@ -89,3 +89,27 @@ upBtn.addEventListener('click', () => {
   });
 
 })
+
+
+//  Projects
+
+const workContainer = document.querySelector('.work__category');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workContainer.addEventListener('click', (e) => {
+  //span 태그의 숫자를 클릭하더라도 parentNode의 dataset 으로 올라가 데이터 가져올 수 있음
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+  for (let project of projects) {
+    //filter에 해당 된다면 보여지고
+    if (filter === "*" || filter === project.dataset.type) {
+      project.classList.remove('invisible');
+    } else {
+      //filter에 해당되지않는다면 안보여지도록
+      project.classList.add('invisible');
+    }
+  }
+})
