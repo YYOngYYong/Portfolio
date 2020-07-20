@@ -374,6 +374,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all 300ms ease-out;
+}
+
+.work__projects.anime-out {
+  opacity: 0;
+  transform: scale(0.95) translateY(10px);
 }
 
 .project {

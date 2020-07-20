@@ -103,13 +103,20 @@ workContainer.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
-  for (let project of projects) {
-    //filter에 해당 된다면 보여지고
-    if (filter === "*" || filter === project.dataset.type) {
-      project.classList.remove('invisible');
-    } else {
-      //filter에 해당되지않는다면 안보여지도록
-      project.classList.add('invisible');
+
+  projectContainer.classList.add('anime-out');
+
+
+  setTimeout(() => {
+    for (let project of projects) {
+      //filter에 해당 된다면 보여지고
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        //filter에 해당되지않는다면 안보여지도록  
+        project.classList.add('invisible');
+      }
     }
-  }
+    projectContainer.classList.remove('anime-out');
+  }, 300)
 })
