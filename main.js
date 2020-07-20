@@ -34,7 +34,7 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-
+  navbarMenu.classList.remove('open');
   console.log(event.target.dataset.link);
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({
@@ -44,7 +44,13 @@ navbarMenu.addEventListener('click', (event) => {
 
 })
 
+// navbar 작은 화면에서 햄버거 메뉴 토글링
 
+const navbarToggleBtn = document.querySelector('.navbar__togglebtn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+
+})
 //contact 버튼 클릭 시 스크롤 이동
 
 const contactBtn = document.querySelector('.home__contact');
