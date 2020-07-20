@@ -97,13 +97,26 @@ const workContainer = document.querySelector('.work__category');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
 
+
+
+
+
 workContainer.addEventListener('click', (e) => {
   //span 태그의 숫자를 클릭하더라도 parentNode의 dataset 으로 올라가 데이터 가져올 수 있음
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
     return;
   }
+  // 선택한 버튼에만 색 입혀지도록 하는 기능 ( 이전 거는 삭제)
+  const selected = document.querySelector(".category__btn.selected");
+  selected.classList.remove('selected');
 
+  //클릭했을때 selected 클래스 생성
+  e.target.classList.add('selected');
+
+
+
+  //투명상태에서 클릭 시올라오는 애니메이션 삽입
   projectContainer.classList.add('anime-out');
 
 
